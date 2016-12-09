@@ -29,8 +29,6 @@ object frmMain: TfrmMain
     Height = 512
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 509
-    ExplicitHeight = 357
   end
   object tbMain: TToolBar
     Left = 0
@@ -41,7 +39,6 @@ object frmMain: TfrmMain
     ButtonWidth = 54
     Images = imgMain
     TabOrder = 1
-    ExplicitWidth = 509
     object btnCatalogos: TToolButton
       Left = 0
       Top = 0
@@ -65,7 +62,6 @@ object frmMain: TfrmMain
     Anchors = [akTop, akRight]
     Caption = 'X'
     TabOrder = 2
-    ExplicitLeft = 481
   end
   object actMain: TActionList
     Images = imgMain
@@ -76,11 +72,20 @@ object frmMain: TfrmMain
       OnExecute = actCloseExecute
       OnUpdate = actCloseUpdate
     end
+    object actFamilias: TAction
+      Category = 'Catalogos'
+      Caption = 'actFamilias'
+    end
+    object actIngresos: TAction
+      Caption = 'Ingresos'
+    end
   end
   object mnuCatalogos: TPopupMenu
     Images = imgMain
     Left = 240
     Top = 264
+    object TMenuItem
+    end
   end
   object imgMain: TImageList
     ColorDepth = cd32Bit
@@ -90,7 +95,7 @@ object frmMain: TfrmMain
     Left = 240
     Top = 152
     Bitmap = {
-      494C010101000800840020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C0101010008008C0020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000002000000001002000000000000040
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -628,5 +633,10 @@ object frmMain: TfrmMain
   object mnuOperaciones: TPopupMenu
     Left = 240
     Top = 320
+    object TMenuItem
+    end
+    object Ingresos1: TMenuItem
+      Action = actIngresos
+    end
   end
 end
